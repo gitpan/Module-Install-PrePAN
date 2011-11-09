@@ -1,0 +1,27 @@
+NAME
+    Module::Install::PrePAN - Designate a URL of PrePAN page of a module
+
+SYNOPSIS
+      # Makefile.PL
+      prepan_url  'http://prepan.org/module/3Yz7PYrBJG';
+
+DESCRIPTION
+    Module::Install::PrePAN is a Module::Install extension to designate a
+    URL of PrePan page where you requested reviews for your module.
+
+AUTHOR
+    Kentaro Kuribayashi <kentarok@gmail.com>
+
+SEE ALSO
+    *   Module::Install
+
+    *   PrePAN
+
+        <http://prepan.org/>
+
+LICENSE
+    Copyright (C) Kentaro Kuribayashi
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
