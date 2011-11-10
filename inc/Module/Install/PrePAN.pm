@@ -5,14 +5,20 @@ use strict;
 use warnings;
 use Carp ();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use base qw(Module::Install::Base);
 
-sub prepan_url {
-    my ($self, $url) = @_;
-    Carp::croak 'missing parameter: $url' if !defined $url;
-    $self->resources(PrePAN => $url);
+my %SCHEMA = (
+    module_url => 1,
+    author_url => 1,
+);
+
+sub prepan {
+    my ($self, %args) = @_;
+    my @invalid_keys = grep { !$SCHEMA{$_} } keys %args;
+    Carp::croak "invalid keys: " . join ', ', @invalid_keys if @invalid_keys;
+    $self->resources(X_prepan => \%args);
 }
 
 !!1;
@@ -21,4 +27,4 @@ __END__
 
 =encoding utf8
 
-#line 60
+#line 85

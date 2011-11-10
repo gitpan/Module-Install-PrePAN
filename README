@@ -1,13 +1,30 @@
 NAME
-    Module::Install::PrePAN - Designate a URL of PrePAN page of a module
+    Module::Install::PrePAN - Designate resources at PrePAN related to a
+    module
 
 SYNOPSIS
       # Makefile.PL
-      prepan_url  'http://prepan.org/module/3Yz7PYrBJG';
+      prepan module_url => 'http://prepan.org/module/3Yz7PYrBJG',
+             author_url => 'http://prepan.org/user/3XR97nG2Gi';
 
 DESCRIPTION
-    Module::Install::PrePAN is a Module::Install extension to designate a
-    URL of PrePan page where you requested reviews for your module.
+    Module::Install::PrePAN is a Module::Install extension to designate some
+    resources at PrePAN, social reviewing site for Perl modules
+    (<http://prepan.org/>).
+
+METHODS
+  prepan ( *%args* )
+    Adds resources at PrePAN passed in as %args under
+    $meta.resources.X_prepan.
+
+    CPAN META Spec version 1.4 specifies that unofficial keys under
+    $meta.resource must include at least one upper-case letter but version 2
+    doesn't. Besides, ver.2 formalized all custom keys not listed in the
+    official spec use "x_" or "X_". Ver.2 has been a draft yet so that
+    toolchains haven't supported the new spec around $meta.resources. See
+    CPAN::Meta::Spec and CPAN::Meta::History for details.
+
+    This module uses the key "X_prepan" because of that.
 
 AUTHOR
     Kentaro Kuribayashi <kentarok@gmail.com>
