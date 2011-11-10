@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Carp ();
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base qw(Module::Install::Base);
 
@@ -27,4 +27,4 @@ __END__
 
 =encoding utf8
 
-#line 85
+#line 84
