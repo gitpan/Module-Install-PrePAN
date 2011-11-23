@@ -28,4 +28,4 @@ resources:
     module_url: http://prepan.org/module/3Yz7PYrBJG
   license: http://dev.perl.org/licenses/
   repository: git://github.com/kentaro/Module-Install-PrePAN.git
-version: 0.03
+version: 0.04
